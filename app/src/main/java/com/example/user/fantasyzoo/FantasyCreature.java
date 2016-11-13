@@ -11,13 +11,15 @@ public abstract class FantasyCreature {
     private String name;
     private int age;
     private int size; //size is a scale of 1 to 5, 5 being largest
-    ArrayList<String> belly;
+    private double price;
+    ArrayList<Food> belly;
 
-    public FantasyCreature(String name, int age, int size) {
+    public FantasyCreature(String name, int age, int size, double price) {
         this.name = name;
         this.age = age;
         this.size = size;
-        this.belly = new ArrayList<String>();
+        this.price = price;
+        this.belly = new ArrayList<Food>();
     }
 
     public String getName() {
@@ -32,7 +34,11 @@ public abstract class FantasyCreature {
         return(size);
     }
 
-    public void eat(String food) {
+    public double getPrice() {
+        return(price);
+    }
+
+    public void eat(Food food) {
         belly.add(food);
     }
 

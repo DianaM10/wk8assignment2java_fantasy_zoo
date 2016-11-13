@@ -14,12 +14,11 @@ import static org.junit.Assert.*;
 public class VampireTest {
 
     Vampire vampire1;
-    ArrayList<String> belly;
+    Food food;
 
     @Before
     public void before() {
-        vampire1 = new Vampire("Spike", 136, 4);
-        belly = new ArrayList<String>();
+        vampire1 = new Vampire("Spike", 136, 4, 478.99);
     }
 
     @Test
@@ -38,7 +37,19 @@ public class VampireTest {
     }
 
     @Test
+    public void vampireHasPrice() {
+        assertEquals(478.99, vampire1.getPrice(), 0.01);
+    }
+
+    @Test
     public void vampireCanEat() {
-        belly.eat(food);
+        vampire1.eat(food);
+        assertEquals(1, vampire1.foodCount());
+    }
+
+    @Test
+    public void vampireIsHungry() {
+        vampire1.hungry();
+        assertEquals(0, vampire1.foodCount());
     }
 }
