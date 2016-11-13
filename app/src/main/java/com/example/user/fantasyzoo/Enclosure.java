@@ -24,6 +24,7 @@ public class Enclosure {
         this.cage.add(creature);
     }
 
+
     public int cageCount() {
         return this.cage.size();
     }
@@ -36,10 +37,40 @@ public class Enclosure {
 
     }
 
+    public void emptyCage() {
+        this.cage.clear();
+    }
+
     public Cageable remove() {
         if (cageCount()>0) {
             return cage.remove(0);
         }
+        return null;
+    }
+
+    public Cageable remove(Vampire vampire) {
+        for (Cageable creature: cage) {
+            if (creature == vampire) {
+                 return this.remove();
+            }
+        }
+        return null;
+    }
+
+    public Cageable remove(FantasyCreature fantasyCreature) {
+        for (Cageable creature: cage) {
+            if (creature == fantasyCreature) {
+                return this.remove();
+            }
+        }
+        return null;
+    }
+
+    public FantasyCreature checkCreature(FantasyCreature fantasyCreature) {
+        for (Cageable creature: cage)
+            if (creature == fantasyCreature) {
+                return fantasyCreature;
+            }
         return null;
     }
 
