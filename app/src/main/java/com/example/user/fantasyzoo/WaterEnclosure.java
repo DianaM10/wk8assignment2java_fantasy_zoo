@@ -17,8 +17,12 @@ public class WaterEnclosure extends Enclosure {
         this.cage = new ArrayList<Submergable>();
 
     }
-    public void cage(Submergable creature) {
-        this.cage.add(creature);
+    public String cage(Submergable creature) {
+        if (this.cageFull() == false) {
+            this.cage.add(creature);
+            return "Creature has been sucessfully caged";
+        }
+        return "This cage is full, use another one!";
     }
 
 

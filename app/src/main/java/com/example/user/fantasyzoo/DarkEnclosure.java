@@ -16,10 +16,13 @@ public class DarkEnclosure extends Enclosure {
     }
 
 
-    public void cage(Undeadable creature) {
-        this.cage.add(creature);
+    public String cage(Undeadable creature) {
+        if (this.cageFull() == false) {
+            this.cage.add(creature);
+            return "Creature has been sucessfully caged";
+        }
+        return "This cage is full, use another one!";
     }
-
 
     public int cageCount() {
         return this.cage.size();

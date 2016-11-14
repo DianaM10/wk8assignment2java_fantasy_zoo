@@ -45,6 +45,15 @@ public class ZooTest {
         standardEnclosure1.cage(werewolf);
         customer1 = new Customer(100.00, 0);
         customer2 = new Customer(30.53, 1);
+        darkEnclosure1.cage(vampire1);
+        darkEnclosure1.cage(vampire2);
+        darkEnclosure1.cage(vampire3);
+        darkEnclosure1.cage(zombie1);
+        standardEnclosure1.cage(dayWalker);
+        standardEnclosure1.cage(werewolf);
+        waterEnclosure.cage(kelpie);
+        waterEnclosure.cage(lochNessMonster);
+
 
     }
 
@@ -57,4 +66,17 @@ public class ZooTest {
     public void zooCanSellTicket() {
         assertEquals(15015.50, zoo.sellTicket(customer1));
     }
+
+    @Test
+    public void canPutUndeadablesinCage() {
+        assertEquals(4,darkEnclosure1.cageCount());
+    }
+
+    @Test
+    public void customersCanEnterZoo() {
+        assertEquals("Buy a ticket first or I will feed you to the zombie!", zoo.entryToZoo(customer1));
+        assertEquals("Welcome to the Zoo!", zoo.entryToZoo(customer2));
+    }
+
+//    @
 }

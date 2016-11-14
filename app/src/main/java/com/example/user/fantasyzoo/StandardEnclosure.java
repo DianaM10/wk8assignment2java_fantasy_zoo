@@ -15,9 +15,14 @@ public class StandardEnclosure extends Enclosure{
         this.cage = new ArrayList<Bleedable>();
     }
 
-    public void cage(Bleedable creature) {
-        this.cage.add(creature);
+    public String cage(Bleedable creature) {
+        if (this.cageFull() == false) {
+            this.cage.add(creature);
+            return "Creature has been sucessfully caged";
+        }
+        return "This cage is full, use another one!";
     }
+
 
 
     public int cageCount() {

@@ -17,6 +17,7 @@ public class DarkEnclosureTest {
     Vampire vampire1;
     Vampire vampire2;
     Vampire vampire3;
+    Vampire vampire4;
     Zombie zombie1;
     DayWalker dayWalker;
     Werewolf werewolf;
@@ -28,6 +29,7 @@ public class DarkEnclosureTest {
         vampire1 = new Vampire("Spike", 136, 4, 478.99);
         vampire2 = new Vampire("Angel", 279, 4, 1289.53);
         vampire3 = new Vampire("Drusilla", 156, 4, 980.70);
+        vampire4 = new Vampire("Dracula", 404, 4, 1456.00);
         zombie1 = new Zombie("Ed", 29, 4, 58.98);
         dayWalker = new DayWalker("Blade", 78, 4, 1699.50);
         werewolf = new Werewolf("Scott McCall", 17, 3, 325.09);
@@ -93,6 +95,12 @@ public class DarkEnclosureTest {
     public void canCheckCreaturesinCage() {
         assertEquals(vampire2, darkEnclosure2.checkCreature(vampire2));
     }
+
+    @Test
+    public void cannotPutMoreCreaturesInThanEnclosureSize() {
+        assertEquals("This cage is full, use another one!", darkEnclosure1.cage(vampire4));
+    }
+
 
 
 

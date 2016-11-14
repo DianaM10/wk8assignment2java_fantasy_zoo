@@ -31,5 +31,12 @@ public class Zoo {
         return this.cashInBank + ticket.getPrice();
     }
 
-    
+    public String entryToZoo(Customer customer) {
+        if (customer.getTicket() == 1) {
+            return "Welcome to the Zoo!";
+        }
+        else return "Buy a ticket first or I will feed you to the zombie!";
+    }
+
+
 }
