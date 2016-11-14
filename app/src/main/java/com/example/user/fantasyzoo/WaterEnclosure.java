@@ -1,0 +1,65 @@
+package com.example.user.fantasyzoo;
+
+import android.icu.lang.UScript;
+
+import java.util.ArrayList;
+
+/**
+ * Created by user on 14/11/2016.
+ */
+
+public class WaterEnclosure extends Enclosure {
+
+    ArrayList<Submergable> cage;
+
+    public WaterEnclosure(int size) {
+        super(size);
+        this.cage = new ArrayList<Submergable>();
+
+    }
+    public void cage(Submergable creature) {
+        this.cage.add(creature);
+    }
+
+
+    public int cageCount() {
+        return this.cage.size();
+    }
+
+    public boolean cageFull() {
+        if (cageCount() == size) {
+            return true;
+        }
+        else return false;
+
+    }
+
+    public void emptyCage() {
+        this.cage.clear();
+    }
+
+    public Submergable remove() {
+        if (cageCount()>0) {
+            return cage.remove(0);
+        }
+        return null;
+    }
+
+
+    public Submergable remove(FantasyCreature fantasyCreature) {
+        for (Submergable creature: cage) {
+            if (creature == fantasyCreature) {
+                return this.remove();
+            }
+        }
+        return null;
+    }
+
+    public FantasyCreature checkCreature(FantasyCreature fantasyCreature) {
+        for (Submergable creature: cage)
+            if (creature == fantasyCreature) {
+                return fantasyCreature;
+            }
+        return null;
+    }
+}

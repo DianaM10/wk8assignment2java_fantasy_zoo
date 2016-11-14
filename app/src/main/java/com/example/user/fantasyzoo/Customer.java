@@ -30,4 +30,12 @@ public class Customer {
         this.ticket = ticket;
     }
 
+    public void buyTicket(Ticket ticket) {
+       if ((ticket.getTicketTotal() > 0) && (this.getWallet() >= ticket.getPrice())) {
+           ticket.setTicketTotal(ticket.getTicketTotal()-1);
+           this.setTicket(this.getTicket()+1);
+           this.setWallet(this.getWallet()-ticket.getPrice());
+       }
+    }
+
 }

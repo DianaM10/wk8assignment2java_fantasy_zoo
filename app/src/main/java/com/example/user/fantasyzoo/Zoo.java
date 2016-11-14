@@ -6,22 +6,30 @@ package com.example.user.fantasyzoo;
 
 public class Zoo {
 
-    private double totalIncome;
+    private double cashInBank;
+    //list of enclosures
+    WaterEnclosure waterEnclosure;
+    StandardEnclosure standardEnclosure;
+    DarkEnclosure darkEnclosure;
+    Customer customer;
 
     public Zoo(){
-        totalIncome = 15000.00;
+        cashInBank = 15000.00;
     }
 
-    public void setTotalIncome(double totalIncome) {
-        this.totalIncome = totalIncome;
+    public void setCashInBank(double totalIncome) {
+        this.cashInBank = totalIncome;
     }
 
-    public double getTotalIncome() {
-        return(totalIncome);
+    public double getCashInBank() {
+        return(cashInBank);
     }
 
-    public double sellTicket() {
-        Customer.buyTicket();
-        return (totalIncome + Ticket.getPrice());
+    public double sellTicket(Customer customer) {
+        Ticket ticket = new Ticket();
+        customer.buyTicket(ticket);
+        return this.cashInBank + ticket.getPrice();
     }
+
+    
 }

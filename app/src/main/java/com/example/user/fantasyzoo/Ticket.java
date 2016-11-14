@@ -7,7 +7,7 @@ package com.example.user.fantasyzoo;
 public class Ticket {
 
     private double price;
-    private Integer ticketTotal;
+    public Integer ticketTotal;
 
 
     public Ticket() {
