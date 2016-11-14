@@ -1,6 +1,7 @@
 package com.example.user.fantasyzoo;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Random;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Random;
 public class Zoo {
 
     private double cashInBank;
-    ArrayList<Cageable> allEnclosures
+    ArrayList<Cageable> allEnclosures;
     //list of enclosures
     WaterEnclosure waterEnclosure;
     StandardEnclosure standardEnclosure;
@@ -43,18 +44,27 @@ public class Zoo {
         else return "Buy a ticket first or I will feed you to the zombie!";
     }
 
-    public String rampage() {
-        this.allEnclosures.add(waterEnclosure);
-        this.allEnclosures.add(darkEnclosure);
-        this.allEnclosures.add(standardEnclosure);
+    public String rampage(ArrayList<Cageable> allEnclosures) {
         Random rand = new Random();
         int listSize = allEnclosures.size();
         int index = rand.nextInt(listSize);
-
-        //empty cage at this index, and list what is in there in a string saying they are rampaging
-        String answer = getAnswerAtIndex(index);
-        return answer;
+        Object cage = allEnclosures.get(index);
+        if (cage.equals(waterEnclosure)) {
+            waterEnclosure.emptyCage();
+            return "The water enclosure has been compromised, creatures have escaped!";
+        }
+        if( cage.equals(darkEnclosure)) {
+            darkEnclosure.emptyCage();
+            return "The dark enclosure has been compromised, creatures have escaped!";
+        }
+        if(cage.equals(standardEnclosure)) {
+            standardEnclosure.emptyCage();
+            return "The standard enclosure has been compromised, creatures have escaped!";
+        }
+        return "All is well in the Zoo, have a nice day!";
     }
+
+
 
 
 }

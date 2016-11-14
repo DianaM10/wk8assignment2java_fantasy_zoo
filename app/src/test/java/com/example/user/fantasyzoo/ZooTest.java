@@ -3,6 +3,8 @@ package com.example.user.fantasyzoo;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static junit.framework.Assert.assertEquals;
 
 /**
@@ -12,8 +14,9 @@ import static junit.framework.Assert.assertEquals;
 public class ZooTest {
 
     Zoo zoo;
-    StandardEnclosure standardEnclosure1;
-    DarkEnclosure darkEnclosure1;
+    ArrayList<Cageable> allEnclosures;
+    StandardEnclosure standardEnclosure;
+    DarkEnclosure darkEnclosure;
     WaterEnclosure waterEnclosure;
     Vampire vampire1;
     Vampire vampire2;
@@ -30,8 +33,8 @@ public class ZooTest {
     @Before
     public void before() {
         zoo = new Zoo();
-        standardEnclosure1 = new StandardEnclosure(2);
-        darkEnclosure1 = new DarkEnclosure(4);
+        standardEnclosure = new StandardEnclosure(2);
+        darkEnclosure = new DarkEnclosure(4);
         waterEnclosure = new WaterEnclosure(2);
         vampire1 = new Vampire("Spike", 136, 4, 478.99);
         vampire2 = new Vampire("Angel", 279, 4, 1289.53);
@@ -41,18 +44,22 @@ public class ZooTest {
         werewolf = new Werewolf("Scott McCall", 17, 3, 325.09);
         kelpie = new Kelpie("Duke", 379, 5, 987.60);
         lochNessMonster = new LochNessMonster("Nessie", 101, 5, 2500.50);
-        standardEnclosure1.cage(dayWalker);
-        standardEnclosure1.cage(werewolf);
+        standardEnclosure.cage(dayWalker);
+        standardEnclosure.cage(werewolf);
         customer1 = new Customer(100.00, 0);
         customer2 = new Customer(30.53, 1);
-        darkEnclosure1.cage(vampire1);
-        darkEnclosure1.cage(vampire2);
-        darkEnclosure1.cage(vampire3);
-        darkEnclosure1.cage(zombie1);
-        standardEnclosure1.cage(dayWalker);
-        standardEnclosure1.cage(werewolf);
+        darkEnclosure.cage(vampire1);
+        darkEnclosure.cage(vampire2);
+        darkEnclosure.cage(vampire3);
+        darkEnclosure.cage(zombie1);
+        standardEnclosure.cage(dayWalker);
+        standardEnclosure.cage(werewolf);
         waterEnclosure.cage(kelpie);
         waterEnclosure.cage(lochNessMonster);
+        allEnclosures = new ArrayList<>();
+        allEnclosures.add(darkEnclosure);
+        allEnclosures.add(waterEnclosure);
+        allEnclosures.add(standardEnclosure);
 
 
     }
@@ -69,7 +76,7 @@ public class ZooTest {
 
     @Test
     public void canPutUndeadablesinCage() {
-        assertEquals(4,darkEnclosure1.cageCount());
+        assertEquals(4,darkEnclosure.cageCount());
     }
 
     @Test
@@ -80,6 +87,6 @@ public class ZooTest {
 
     @Test
     public void creaturesRandomlyRampage() {
-        assertEquals("WARNING", zoo.Rampage());
+        assertEquals("Evacute Zoo please in an orderly fashion", zoo.rampage(allEnclosures));
     }
 }
