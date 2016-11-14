@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by user on 14/11/2016.
  */
 
-public class LochNessMonster extends FantasyCreature implements Cageable, Submergable {
+public class LochNessMonster extends FantasyCreature implements Submergable {
 
     public LochNessMonster(String name, int age, int size, double price) {
         super(name, age, size, price);

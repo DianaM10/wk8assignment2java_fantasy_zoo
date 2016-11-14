@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by user on 14/11/2016.
  */
 
-public class WaterEnclosure extends Enclosure {
+public class WaterEnclosure extends Enclosure implements Cageable{
 
     ArrayList<Submergable> cage;
 

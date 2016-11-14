@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by user on 14/11/2016.
  */
 
-public class Zombie extends FantasyCreature implements Cageable, Undeadable {
+public class Zombie extends FantasyCreature implements Undeadable {
 
     public Zombie(String name, int age, int size, double price) {
         super(name, age, size, price);

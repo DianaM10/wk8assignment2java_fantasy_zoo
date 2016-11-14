@@ -78,5 +78,8 @@ public class ZooTest {
         assertEquals("Welcome to the Zoo!", zoo.entryToZoo(customer2));
     }
 
-//    @
+    @Test
+    public void creaturesRandomlyRampage() {
+        assertEquals("WARNING", zoo.Rampage());
+    }
 }

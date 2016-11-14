@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by user on 14/11/2016.
  */
 
-public class Kelpie extends FantasyCreature implements Cageable, Submergable {
+public class Kelpie extends FantasyCreature implements Submergable {
 
     public Kelpie(String name, int age, int size, double price) {
         super(name, age, size, price);
