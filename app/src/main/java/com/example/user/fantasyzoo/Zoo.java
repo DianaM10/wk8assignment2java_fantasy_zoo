@@ -68,6 +68,8 @@ public class Zoo {
     }
 
     public String sell(FantasyCreature fantasyCreature) {
+        this.setCashInBank(cashInBank + fantasyCreature.getPrice());
+//        sellCreature(fantasyCreature);
         if (fantasyCreature instanceof Submergable) {
             for (Enclosure enclosure : allEnclosures) {
                 if (enclosure instanceof WaterEnclosure) {
@@ -95,5 +97,17 @@ public class Zoo {
         }
         return "We don't have any left, go away";
     }
+
+//    public String sellCreature(Bleedable fantasyCreature) {
+//
+//    }
+//    public String sellCreature(Undeadable fantasyCreature) {
+//
+//    }
+//    public String sellCreature(Submergable fantasyCreature) {
+//
+//    }
+
+
 
 }
