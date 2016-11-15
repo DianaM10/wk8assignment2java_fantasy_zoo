@@ -3,12 +3,31 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/zoo_button"
-        android:text="Enter Zoo at your Own Risk!"
-        android:layout_width="150dip"
-        android:layout_height="150dip"
-        android:layout_gravity="center"
-        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/background"
+            />
+
+        <Button
+            android:id="@+id/zoo_button"
+            android:text="Enter Zoo at your Own Risk!"
+            android:layout_width="150dip"
+            android:layout_height="80dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="142dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
 
 </LinearLayout>
