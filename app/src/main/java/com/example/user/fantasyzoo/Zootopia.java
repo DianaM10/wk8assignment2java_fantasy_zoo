@@ -27,18 +27,14 @@ public class Zootopia extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Zootopia", "Zoo clicked");
-//                Intent intent = new Intent(Zootopia.this, ResultActivity.class);
-//                String result = game.playGame("Rock");
-//                intent.putExtra("result", result);
-//                startActivity(intent);
-//            }
-//
-//        });
-
-
+                Intent intent = new Intent(Zootopia.this, ZooResultActivity.class);
+                startActivity(intent);
             }
 
-
         });
+
     }
+
+
+
 }

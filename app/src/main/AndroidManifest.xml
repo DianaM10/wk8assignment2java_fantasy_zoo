@@ -19,6 +19,18 @@
 
             </activity>
 
+        <activity
+            android:name=".ZooResultActivity"
+            android:label="@string/zoo_result_activity_title"
+            android:parentActivityName=".Zootopia">
+        </activity>
+
+        <activity
+            android:name=".EnclosureResultActivity"
+            android:label="@string/result_activity_title"
+            android:parentActivityName=".ZooResultActivity">
+        </activity>
+
     </application>
 
 </manifest>

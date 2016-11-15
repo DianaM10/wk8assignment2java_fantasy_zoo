@@ -1,18 +1,10 @@
 package com.example.user.fantasyzoo;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.ArrayList;
-
-import static junit.framework.Assert.assertEquals;
-
 /**
- * Created by user on 14/11/2016.
+ * Created by user on 15/11/2016.
  */
 
-public class ZooTest {
-
+public class ZooData {
     Zoo zoo;
     StandardEnclosure standardEnclosure;
     DarkEnclosure darkEnclosure;
@@ -30,8 +22,7 @@ public class ZooTest {
     Food food;
     Ticket ticket;
 
-    @Before
-    public void before() {
+    public void ZooData() {
         zoo = new Zoo();
         standardEnclosure = new StandardEnclosure(2);
         darkEnclosure = new DarkEnclosure(4);
@@ -59,48 +50,8 @@ public class ZooTest {
         zoo.addEnlosuresToZoo(darkEnclosure);
         zoo.addEnlosuresToZoo(waterEnclosure);
         zoo.addEnlosuresToZoo(standardEnclosure);
+        ticket = new Ticket();
 
 
     }
-
-    @Test
-    public void canCheckCashInBank() {
-        assertEquals(15000.00, zoo.getCashInBank());
-    }
-
-    @Test
-    public void zooCanSellTicket() {
-        assertEquals(15015.50, zoo.sellTicket(customer1));
-    }
-
-    @Test
-    public void canPutUndeadablesinCage() {
-        assertEquals(4,darkEnclosure.cageCount());
-    }
-
-    @Test
-    public void customersCanEnterZoo() {
-        assertEquals("Buy a ticket first or I will feed you to the zombie!", zoo.entryToZoo(customer1));
-        assertEquals("Welcome to the Zoo!", zoo.entryToZoo(customer2));
-    }
-
-//    @Test
-//    public void creaturesRandomlyRampage() {
-//        assertEquals("Evacuate Zoo please in an orderly fashion", zoo.rampage());
-//    }
-
-    @Test
-    public void canSellCreature() {
-        assertEquals("Here is Blade. You owe me 1699.5", zoo.sell(dayWalker));
-        assertEquals(16699.50, zoo.getCashInBank());
-        assertEquals(1, standardEnclosure.cageCount());
-
-    }
-    @Test
-    public void canFeedCreatures() {
-        lochNessMonster.eat(food);
-        assertEquals(1, lochNessMonster.foodCount());
-    }
-
-
 }

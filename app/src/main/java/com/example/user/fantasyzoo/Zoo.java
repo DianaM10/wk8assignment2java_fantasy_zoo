@@ -54,15 +54,15 @@ public class Zoo {
         Enclosure enclosure = allEnclosures.get(index);
         if (enclosure instanceof WaterEnclosure) {
             ((WaterEnclosure) enclosure).emptyCage();
-            return "The water enclosure has been compromised, creatures have escaped! Please evacuated the zoo in an orderly fashion.";
+            return "The water enclosure has been compromised, creatures have escaped! Please evacuate the zoo in an orderly fashion.";
         }
         if (enclosure instanceof DarkEnclosure) {
             ((DarkEnclosure) enclosure).emptyCage();
-            return "The dark enclosure has been compromised, creatures have escaped! Please evacuated the zoo in an orderly fashion.";
+            return "The dark enclosure has been compromised, creatures have escaped! Please evacuate the zoo in an orderly fashion.";
         }
         if (enclosure instanceof StandardEnclosure) {
             ((StandardEnclosure) enclosure).emptyCage();
-            return "The standard enclosure has been compromised, creatures have escaped! Please evacuated the zoo in an orderly fashion.";
+            return "The standard enclosure has been compromised, creatures have escaped! Please evacuate the zoo in an orderly fashion.";
         }
         return "All is well in the Zoo, have a nice day!";
     }

@@ -5,7 +5,7 @@
 
     <Button
         android:id="@+id/zoo_button"
-        android:text="Click to Enter Zoo"
+        android:text="Enter Zoo at your Own Risk!"
         android:layout_width="150dip"
         android:layout_height="150dip"
         android:layout_gravity="center"
