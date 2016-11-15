@@ -1,14 +1,12 @@
 package com.example.user.fantasyzoo;
 
-import android.icu.lang.UScript;
-
 import java.util.ArrayList;
 
 /**
  * Created by user on 14/11/2016.
  */
 
-public class WaterEnclosure extends Enclosure implements Cageable{
+public class WaterEnclosure extends Enclosure {
 
     ArrayList<Submergable> cage;
 

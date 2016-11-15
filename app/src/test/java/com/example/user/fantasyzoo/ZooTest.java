@@ -14,7 +14,6 @@ import static junit.framework.Assert.assertEquals;
 public class ZooTest {
 
     Zoo zoo;
-    ArrayList<Cageable> allEnclosures;
     StandardEnclosure standardEnclosure;
     DarkEnclosure darkEnclosure;
     WaterEnclosure waterEnclosure;
@@ -56,10 +55,9 @@ public class ZooTest {
         standardEnclosure.cage(werewolf);
         waterEnclosure.cage(kelpie);
         waterEnclosure.cage(lochNessMonster);
-        allEnclosures = new ArrayList<>();
-        allEnclosures.add(darkEnclosure);
-        allEnclosures.add(waterEnclosure);
-        allEnclosures.add(standardEnclosure);
+        zoo.addEnlosuresToZoo(darkEnclosure);
+        zoo.addEnlosuresToZoo(waterEnclosure);
+        zoo.addEnlosuresToZoo(standardEnclosure);
 
 
     }
@@ -85,8 +83,16 @@ public class ZooTest {
         assertEquals("Welcome to the Zoo!", zoo.entryToZoo(customer2));
     }
 
+//    @Test
+//    public void creaturesRandomlyRampage() {
+//        assertEquals("Evacute Zoo please in an orderly fashion", zoo.rampage());
+//    }
+
     @Test
-    public void creaturesRandomlyRampage() {
-        assertEquals("Evacute Zoo please in an orderly fashion", zoo.rampage(allEnclosures));
+    public void canSellCreature() {
+        assertEquals("Here is Blade. You owe me 1699.5", zoo.sell(dayWalker));
+        assertEquals(16699.50, zoo.getCashInBank());
+        assertEquals(1, standardEnclosure.cageCount());
+
     }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by user on 13/11/2016.
  */
 
-public class DarkEnclosure extends Enclosure implements Cageable {
+public class DarkEnclosure extends Enclosure {
 
     ArrayList<Undeadable> cage;
 
