@@ -76,7 +76,7 @@ public class ZooResultActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Log.d("ZooResultActivity", "buy button clicked");
-                Intent intent = new Intent(ZooResultActivity.this, EnclosureResultActivity.class);
+                Intent intent = new Intent(ZooResultActivity.this, BuyCreatureActivity.class);
 //                ZooData zooData = new ZooData();
 //                String contents = zooData.standardEnclosure.listCreatures();
 //                intent.putExtra("result", contents);

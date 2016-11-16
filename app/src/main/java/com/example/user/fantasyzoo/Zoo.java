@@ -68,7 +68,7 @@ public class Zoo {
     }
 
     public String sell(FantasyCreature fantasyCreature) {
-        this.setCashInBank(cashInBank + fantasyCreature.getPrice());
+         this.setCashInBank(cashInBank + fantasyCreature.getPrice());
 //        sellCreature(fantasyCreature);
         if (fantasyCreature instanceof Submergable) {
             for (Enclosure enclosure : allEnclosures) {

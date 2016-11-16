@@ -1,79 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:baselineAligned="false">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/dark_button"
-        android:text="Dark Enclosure"
-        android:layout_width="150dip"
+        android:id="@+id/blade_button"
+        android:text="Blade the Daywalker"
+        android:layout_width="300dip"
         android:layout_height="85dip"
         android:layout_gravity="center"
-        android:background="@drawable/vamireandzombie"
+
         android:elevation="0dp"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        style="@android:style/Widget.Holo.Button"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/sub_button"
-        android:text="Water Enclosure"
-        android:layout_width="150dip"
+        android:id="@+id/spike_button"
+        android:text="Spike the Vampire"
         android:layout_height="85dip"
         android:layout_gravity="center"
-        android:background="@drawable/nessieandkelpie"
+
         android:elevation="0dp"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        style="@android:style/Widget.Holo.Button"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="300dip" />
 
     <Button
-        android:id="@+id/stand_button"
-        android:text="Standard Enclosure"
-        android:layout_width="150dip"
+        android:id="@+id/angel_button"
+        android:text="Angel the Vampire"
         android:layout_height="85dip"
         android:layout_gravity="center"
-        android:background="@drawable/blade"
+
         android:elevation="0dp"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        style="@android:style/Widget.Holo.Button"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="300dip" />
 
     <Button
-        android:id="@+id/buy_button"
-        android:text="Sell a Creature"
-        android:layout_width="150dip"
+        android:id="@+id/ed_button"
+        android:text="Ed the zombie"
         android:layout_gravity="center"
 
         android:elevation="0dp"
         style="@android:style/Widget.Holo.Button"
         android:layout_height="85dip"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="300dip" />
 
     <Button
-        android:id="@+id/rampage_button"
-        android:text="Rampage"
-        android:layout_width="150dip"
+        android:id="@+id/kelpie_button"
+        android:text="Duke the Kelpie"
         android:layout_gravity="center"
 
         android:elevation="0dp"
         style="@android:style/Widget.Holo.Button"
         android:layout_height="85dip"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="300dip" />
 
     <Button
-        android:id="@+id/cash_button"
-        android:text="Cash in Zoo Bank"
-        android:layout_width="150dip"
+        android:id="@+id/nessie_button"
+        android:text="Nessie the Loch Ness Monster"
         android:layout_gravity="center"
 
         android:elevation="0dp"
         style="@android:style/Widget.Holo.Button"
         android:layout_height="85dip"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="300dip" />
 
 </LinearLayout>

@@ -31,6 +31,12 @@
             android:parentActivityName=".ZooResultActivity">
         </activity>
 
+        <activity
+            android:name=".BuyCreatureActivity"
+            android:label="@string/result_activity_title"
+            android:parentActivityName=".BuyCreatureActivity">
+        </activity>
+
     </application>
 
 </manifest>
