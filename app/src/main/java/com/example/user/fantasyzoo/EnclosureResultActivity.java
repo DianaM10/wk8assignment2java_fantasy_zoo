@@ -17,9 +17,16 @@ public class EnclosureResultActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enclosure_result);
+
         mResultText = (TextView)findViewById(R.id.result_text);
+
+
+        ZooData zooData = new ZooData();
+         String contents = zooData.darkEnclosure.listCreatures();
+        mResultText.setText(contents);
+
 //
-////        ZooData zooData = new ZooData();
+////
 ////        Intent intent = getIntent();
 ////        Bundle extras = intent.getExtras();
 ////        String result = extras.getString("result");

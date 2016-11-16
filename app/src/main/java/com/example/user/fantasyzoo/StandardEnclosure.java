@@ -65,4 +65,20 @@ public class StandardEnclosure extends Enclosure {
             }
         return null;
     }
+
+    public String listCreatures() {
+        String displayText = "";
+        for (Bleedable creature: cage) {
+            FantasyCreature thing = ((FantasyCreature) creature);
+            displayText += "Name: ";
+            displayText += thing.getName();
+            displayText += " | Age: ";
+            displayText += thing.getAge();
+            displayText += " | Price: ";
+            displayText += thing.getPrice();
+            displayText += "\n";
+        }
+        return displayText;
+
+    }
 }

@@ -1,5 +1,7 @@
 package com.example.user.fantasyzoo;
 
+import android.renderscript.ScriptIntrinsicYuvToRGB;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -96,6 +98,11 @@ public class WaterEnclosureTest {
     @Test
     public void canCheckCreaturesinCage() {
         assertEquals(lochNessMonster, waterEnclosure1.checkCreature(lochNessMonster));
+    }
+
+    @Test
+    public void canListContentsOfCage() {
+        assertEquals("Name: Duke | Age: 379 | Price: 987.6" +System.getProperty("line.separator") + "Name: Nessie | Age: 101 | Price: 2500.5"+System.getProperty("line.separator"), waterEnclosure1.listCreatures());
     }
 
 

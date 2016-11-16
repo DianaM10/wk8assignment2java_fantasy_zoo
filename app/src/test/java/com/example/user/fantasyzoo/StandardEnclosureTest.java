@@ -86,4 +86,10 @@ public class StandardEnclosureTest {
         assertEquals(dayWalker, standardEnclosure1.checkCreature(dayWalker));
     }
 
+    @Test
+    public void canListContentsOfCage() {
+        assertEquals("Name: Blade | Age: 78 | Price: 1699.5" +System.getProperty("line.separator") + "Name: Scott McCall | Age: 17 | Price: 325.09"+System.getProperty("line.separator"), standardEnclosure1.listCreatures());
+    }
+
+
 }

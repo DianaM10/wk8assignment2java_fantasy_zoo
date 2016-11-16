@@ -22,7 +22,7 @@ public class ZooData {
     Food food;
     Ticket ticket;
 
-    public void ZooData() {
+    public ZooData() {
         zoo = new Zoo();
         standardEnclosure = new StandardEnclosure(2);
         darkEnclosure = new DarkEnclosure(4);

@@ -101,6 +101,11 @@ public class DarkEnclosureTest {
         assertEquals("This cage is full, use another one!", darkEnclosure1.cage(vampire4));
     }
 
+    @Test
+    public void canListContentsOfCage() {
+        assertEquals("Name: Ed | Age: 29 | Price: 58.98" +System.getProperty("line.separator") + "Name: Spike | Age: 136 | Price: 478.99"+System.getProperty("line.separator") + "Name: Drusilla | Age: 156 | Price: 980.7"+System.getProperty("line.separator"), darkEnclosure1.listCreatures());
+    }
+
 
 
 
