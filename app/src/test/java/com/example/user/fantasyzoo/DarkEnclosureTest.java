@@ -26,13 +26,13 @@ public class DarkEnclosureTest {
     public void before() {
         darkEnclosure1 = new DarkEnclosure(3);
         darkEnclosure2 = new DarkEnclosure(2);
-        vampire1 = new Vampire("Spike", 136, 4, 478.99);
-        vampire2 = new Vampire("Angel", 279, 4, 1289.53);
-        vampire3 = new Vampire("Drusilla", 156, 4, 980.70);
-        vampire4 = new Vampire("Dracula", 404, 4, 1456.00);
-        zombie1 = new Zombie("Ed", 29, 4, 58.98);
-        dayWalker = new DayWalker("Blade", 78, 4, 1699.50);
-        werewolf = new Werewolf("Scott McCall", 17, 3, 325.09);
+        vampire1 = new Vampire("Vampire", "Spike", 136, 4, 478.99);
+        vampire2 = new Vampire("Vampire", "Angel", 279, 4, 1289.53);
+        vampire3 = new Vampire("Vampire", "Drusilla", 156, 4, 980.70);
+        vampire4 = new Vampire("Vampire", "Dracula", 404, 4, 1456.00);
+        zombie1 = new Zombie("Zombie", "Ed", 29, 4, 58.98);
+        dayWalker = new DayWalker("Daywalker", "Blade", 78, 4, 1699.50);
+        werewolf = new Werewolf("Werewolf", "Scott McCall", 17, 3, 325.09);
         darkEnclosure1.cage(zombie1);
         darkEnclosure1.cage(vampire1);
         darkEnclosure1.cage(vampire3);
@@ -103,7 +103,7 @@ public class DarkEnclosureTest {
 
     @Test
     public void canListContentsOfCage() {
-        assertEquals("Name: Ed | Age: 29 | Price: 58.98" +System.getProperty("line.separator") + "Name: Spike | Age: 136 | Price: 478.99"+System.getProperty("line.separator") + "Name: Drusilla | Age: 156 | Price: 980.7"+System.getProperty("line.separator"), darkEnclosure1.listCreatures());
+        assertEquals("Type: Zombie | Name: Ed | Age: 29 | Price: 58.98" +System.getProperty("line.separator") + "Type: Vampire | Name: Spike | Age: 136 | Price: 478.99"+System.getProperty("line.separator") + "Type: Vampire | Name: Drusilla | Age: 156 | Price: 980.7"+System.getProperty("line.separator"), darkEnclosure1.listCreatures());
     }
 
 

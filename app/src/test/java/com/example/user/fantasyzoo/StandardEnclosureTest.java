@@ -22,9 +22,9 @@ public class StandardEnclosureTest {
     public void before() {
         standardEnclosure1 = new StandardEnclosure(2);
         standardEnclosure2 = new StandardEnclosure(1);
-        zombie1 = new Zombie("Ed", 29, 4, 58.98);
-        dayWalker = new DayWalker("Blade", 78, 4, 1699.50);
-        werewolf = new Werewolf("Scott McCall", 17, 3, 325.09);
+        zombie1 = new Zombie("Zombie", "Ed", 29, 4, 58.98);
+        dayWalker = new DayWalker("Daywalker", "Blade", 78, 4, 1699.50);
+        werewolf = new Werewolf("Werewolf", "Scott McCall", 17, 3, 325.09);
         standardEnclosure1.cage(dayWalker);
         standardEnclosure1.cage(werewolf);
 
@@ -88,7 +88,7 @@ public class StandardEnclosureTest {
 
     @Test
     public void canListContentsOfCage() {
-        assertEquals("Name: Blade | Age: 78 | Price: 1699.5" +System.getProperty("line.separator") + "Name: Scott McCall | Age: 17 | Price: 325.09"+System.getProperty("line.separator"), standardEnclosure1.listCreatures());
+        assertEquals("Type: Daywalker | Name: Blade | Age: 78 | Price: 1699.5" +System.getProperty("line.separator") + "Type: Werewolf | Name: Scott McCall | Age: 17 | Price: 325.09"+System.getProperty("line.separator"), standardEnclosure1.listCreatures());
     }
 
 

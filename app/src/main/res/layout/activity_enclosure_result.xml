@@ -5,8 +5,8 @@
 
     <TextView
         android:id="@+id/result_text"
-        android:textSize="30dp"
-        android:textColor="#ff1035"
+        android:textSize="20dp"
+        android:textColor="#080808"
         android:text=""
         android:layout_gravity="bottom"
         android:layout_width="wrap_content"

@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Werewolf extends FantasyCreature implements Bleedable {
 
-    public Werewolf(String name, int age, int size, double price) {
-        super(name, age, size, price);
+    public Werewolf(String type, String name, int age, int size, double price) {
+        super(type, name, age, size, price);
         super.belly = new ArrayList<Food>();
 
     }

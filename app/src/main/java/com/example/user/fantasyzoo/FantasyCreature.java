@@ -8,19 +8,25 @@ import java.util.ArrayList;
 
 public abstract class FantasyCreature {
 
+    private String type;
     private String name;
     private int age;
     private int size; //size is a scale of 1 to 5, 5 being largest
     private double price;
     ArrayList<Food> belly;
 
-    public FantasyCreature(String name, int age, int size, double price) {
+    public FantasyCreature(String type, String name, int age, int size, double price) {
+        this.type = type;
         this.name = name;
         this.age = age;
         this.size = size;
         this.price = price;
         this.belly = new ArrayList<Food>();
     }
+    public String getType() {
+        return(type);
+    }
+
 
     public String getName() {
         return(name);

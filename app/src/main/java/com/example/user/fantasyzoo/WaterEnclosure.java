@@ -69,7 +69,9 @@ public class WaterEnclosure extends Enclosure {
         String displayText = "";
         for (Submergable creature: cage) {
             FantasyCreature thing = ((FantasyCreature) creature);
-            displayText += "Name: ";
+            displayText += "Type: ";
+            displayText += thing.getType();
+            displayText += " | Name: ";
             displayText += thing.getName();
             displayText += " | Age: ";
             displayText += thing.getAge();

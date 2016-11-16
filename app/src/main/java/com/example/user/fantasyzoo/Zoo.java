@@ -53,16 +53,16 @@ public class Zoo {
         int index = rand.nextInt(listSize);
         Enclosure enclosure = allEnclosures.get(index);
         if (enclosure instanceof WaterEnclosure) {
-            ((WaterEnclosure) enclosure).emptyCage();
-            return "The water enclosure has been compromised, creatures have escaped! Please evacuate the zoo in an orderly fashion.";
+//            ((WaterEnclosure) enclosure).emptyCage();
+            return "The water enclosure has been compromised, the following creatures have escaped " + System.getProperty("line.separator") + ((WaterEnclosure) enclosure).listCreatures() + System.getProperty("line.separator")+" Please evacuate the zoo in an orderly fashion.";
         }
         if (enclosure instanceof DarkEnclosure) {
-            ((DarkEnclosure) enclosure).emptyCage();
-            return "The dark enclosure has been compromised, creatures have escaped! Please evacuate the zoo in an orderly fashion.";
+//            ((DarkEnclosure) enclosure).emptyCage();
+            return "The dark enclosure has been compromised, the following creatures have escaped " + System.getProperty("line.separator") + ((DarkEnclosure) enclosure).listCreatures()+ System.getProperty("line.separator")+ " Please evacuate the zoo in an orderly fashion.";
         }
         if (enclosure instanceof StandardEnclosure) {
-            ((StandardEnclosure) enclosure).emptyCage();
-            return "The standard enclosure has been compromised, creatures have escaped! Please evacuate the zoo in an orderly fashion.";
+//            ((StandardEnclosure) enclosure).emptyCage();
+            return "The standard enclosure has been compromised, the following creatures have escaped " + System.getProperty("line.separator") + ((StandardEnclosure) enclosure).listCreatures()+ System.getProperty("line.separator") + " Please evacuate the zoo in an orderly fashion.";
         }
         return "All is well in the Zoo, have a nice day!";
     }

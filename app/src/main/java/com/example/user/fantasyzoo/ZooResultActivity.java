@@ -17,6 +17,9 @@ public class ZooResultActivity extends AppCompatActivity{
     Button darkEnclosureButton;
     Button submergableEnclosureButton;
     Button standardEnclosureButton;
+    Button buyButton;
+    Button rampageButton;
+    Button cashInBankButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +28,19 @@ public class ZooResultActivity extends AppCompatActivity{
         darkEnclosureButton = (Button) findViewById(R.id.dark_button);
         submergableEnclosureButton = (Button) findViewById(R.id.sub_button);
         standardEnclosureButton = (Button) findViewById(R.id.stand_button);
+        buyButton = (Button) findViewById(R.id.buy_button);
+        rampageButton = (Button) findViewById(R.id.rampage_button);
+        cashInBankButton = (Button) findViewById(R.id.cash_button);
 
         darkEnclosureButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("ZooResultActivity", "dark enclosure clicked");
                 Intent intent = new Intent(ZooResultActivity.this, EnclosureResultActivity.class);
-//                String result = game.playGame("Rock");
-//                intent.putExtra("result", result);
+                ZooData zooData = new ZooData();
+                String contents = zooData.darkEnclosure.listCreatures();
+                intent.putExtra("result", contents);
+
                 startActivity(intent);
             }
 
@@ -43,8 +51,9 @@ public class ZooResultActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Log.d("ZooResultActivity", "submergable enclosure clicked");
                 Intent intent = new Intent(ZooResultActivity.this, EnclosureResultActivity.class);
-//                String result = game.playGame("Paper");
-//                intent.putExtra("result", result);
+                ZooData zooData = new ZooData();
+                String contents = zooData.waterEnclosure.listCreatures();
+                intent.putExtra("result", contents);
                 startActivity(intent);
             }
 
@@ -55,8 +64,48 @@ public class ZooResultActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Log.d("ZooResultActivity", "standard enclosure clicked");
                 Intent intent = new Intent(ZooResultActivity.this, EnclosureResultActivity.class);
-//                String result = game.playGame("Scissors");
-//                intent.putExtra("result", result);
+                ZooData zooData = new ZooData();
+                String contents = zooData.standardEnclosure.listCreatures();
+                intent.putExtra("result", contents);
+                startActivity(intent);
+            }
+
+        });
+
+        buyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("ZooResultActivity", "buy button clicked");
+                Intent intent = new Intent(ZooResultActivity.this, EnclosureResultActivity.class);
+//                ZooData zooData = new ZooData();
+//                String contents = zooData.standardEnclosure.listCreatures();
+//                intent.putExtra("result", contents);
+                startActivity(intent);
+            }
+
+        });
+
+        rampageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("ZooResultActivity", "rampage clicked");
+                Intent intent = new Intent(ZooResultActivity.this, EnclosureResultActivity.class);
+                ZooData zooData = new ZooData();
+                String contents = zooData.zoo.rampage();
+                intent.putExtra("result", contents);
+                startActivity(intent);
+            }
+
+        });
+
+        cashInBankButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("ZooResultActivity", "cash button clicked");
+                Intent intent = new Intent(ZooResultActivity.this, EnclosureResultActivity.class);
+                ZooData zooData = new ZooData();
+                double contents = zooData.zoo.getCashInBank();
+                intent.putExtra("result", Double.toString(contents));
                 startActivity(intent);
             }
 

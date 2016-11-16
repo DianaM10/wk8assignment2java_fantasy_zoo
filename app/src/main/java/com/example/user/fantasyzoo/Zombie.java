@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Zombie extends FantasyCreature implements Undeadable {
 
-    public Zombie(String name, int age, int size, double price) {
-        super(name, age, size, price);
+    public Zombie(String type, String name, int age, int size, double price) {
+        super(type, name, age, size, price);
         super.belly = new ArrayList<Food>();
 
     }

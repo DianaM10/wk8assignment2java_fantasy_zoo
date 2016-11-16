@@ -29,14 +29,14 @@ public class WaterEnclosureTest {
     public void before() {
         waterEnclosure1 = new WaterEnclosure(2);
         waterEnclosure2 = new WaterEnclosure(3);
-        vampire1 = new Vampire("Spike", 136, 4, 478.99);
-        vampire2 = new Vampire("Angel", 279, 4, 1289.53);
-        vampire3 = new Vampire("Drusilla", 156, 4, 980.70);
-        zombie1 = new Zombie("Ed", 29, 4, 58.98);
-        dayWalker = new DayWalker("Blade", 78, 4, 1699.50);
-        werewolf = new Werewolf("Scott McCall", 17, 3, 325.09);
-        kelpie = new Kelpie("Duke", 379, 5, 987.60);
-        lochNessMonster = new LochNessMonster("Nessie", 101, 5, 2500.50);
+        vampire1 = new Vampire("Vampire", "Spike", 136, 4, 478.99);
+        vampire2 = new Vampire("Vampire", "Angel", 279, 4, 1289.53);
+        vampire3 = new Vampire("Vampire", "Drusilla", 156, 4, 980.70);
+        zombie1 = new Zombie("Zombie", "Ed", 29, 4, 58.98);
+        dayWalker = new DayWalker("Daywalker", "Blade", 78, 4, 1699.50);
+        werewolf = new Werewolf("Werewolf", "Scott McCall", 17, 3, 325.09);
+        kelpie = new Kelpie("Kelpie", "Duke", 379, 5, 987.60);
+        lochNessMonster = new LochNessMonster("Loch Ness Monster", "Nessie", 101, 5, 2500.50);
 
         waterEnclosure1.cage(kelpie);
         waterEnclosure1.cage(lochNessMonster);
@@ -102,7 +102,7 @@ public class WaterEnclosureTest {
 
     @Test
     public void canListContentsOfCage() {
-        assertEquals("Name: Duke | Age: 379 | Price: 987.6" +System.getProperty("line.separator") + "Name: Nessie | Age: 101 | Price: 2500.5"+System.getProperty("line.separator"), waterEnclosure1.listCreatures());
+        assertEquals("Type: Kelpie | Name: Duke | Age: 379 | Price: 987.6" +System.getProperty("line.separator") + "Type: Loch Ness Monster | Name: Nessie | Age: 101 | Price: 2500.5"+System.getProperty("line.separator"), waterEnclosure1.listCreatures());
     }
 
 

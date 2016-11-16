@@ -18,12 +18,17 @@ public class VampireTest {
 
     @Before
     public void before() {
-        vampire1 = new Vampire("Spike", 136, 4, 478.99);
+        vampire1 = new Vampire("Vampire", "Spike", 136, 4, 478.99);
     }
 
     @Test
     public void vampireHasName() {
         assertEquals("Spike", vampire1.getName());
+    }
+
+    @Test
+    public void vampireHasType() {
+        assertEquals("Vampire", vampire1.getType());
     }
 
     @Test

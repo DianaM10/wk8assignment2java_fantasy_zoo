@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class EnclosureResultActivity extends AppCompatActivity{
 
     TextView mResultText;
+    TextView cashInBankText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,19 +21,23 @@ public class EnclosureResultActivity extends AppCompatActivity{
 
         mResultText = (TextView)findViewById(R.id.result_text);
 
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        String result = extras.getString("result");
 
-        ZooData zooData = new ZooData();
-         String contents = zooData.darkEnclosure.listCreatures();
-        mResultText.setText(contents);
+        mResultText.setText(result);
 
+//        cashInBankText = (TextView)findViewById(R.id.result_text);
 //
-////
-////        Intent intent = getIntent();
-////        Bundle extras = intent.getExtras();
-////        String result = extras.getString("result");
+//        Intent intent2 = getIntent();
+//        Bundle extras2 = intent2.getExtras();
+//        Integer result2 = extras2.getInt("result2");
 //
-//        mResultText.setText(result);
+//        cashInBankText.setText(result2.toString());
+
     }
+
+
 
 }
 
