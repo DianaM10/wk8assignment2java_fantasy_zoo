@@ -8,72 +8,85 @@
     <Button
         android:id="@+id/dark_button"
         android:text="Dark Enclosure"
-        android:layout_width="150dip"
-        android:layout_height="85dip"
+        android:layout_height="75dip"
         android:layout_gravity="center"
         android:background="@drawable/vamireandzombie"
         android:elevation="0dp"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:textSize="24sp" />
+        android:layout_width="180dip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/sub_button"
         android:text="Water Enclosure"
-        android:layout_width="150dip"
-        android:layout_height="85dip"
+        android:layout_height="75dip"
         android:layout_gravity="center"
         android:background="@drawable/nessieandkelpie"
         android:elevation="0dp"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:layout_width="180dip"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/stand_button"
         android:text="Standard Enclosure"
-        android:layout_width="150dip"
-        android:layout_height="85dip"
+        android:layout_height="75dip"
         android:layout_gravity="center"
         android:background="@drawable/blade"
         android:elevation="0dp"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="180dip"
+        android:textStyle="normal|bold"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/buy_button"
         android:text="Sell a Creature"
-        android:layout_width="150dip"
         android:layout_gravity="center"
-
+        android:background="@drawable/werewolf"
         android:elevation="0dp"
         style="@android:style/Widget.Holo.Button"
-        android:layout_height="85dip"
+        android:layout_height="75dip"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="180dip"
+        android:textStyle="normal|bold"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/rampage_button"
-        android:text="Rampage"
-        android:layout_width="150dip"
+        android:text=""
         android:layout_gravity="center"
-
+        android:background="@drawable/rampage"
         android:elevation="0dp"
         style="@android:style/Widget.Holo.Button"
-        android:layout_height="85dip"
+        android:layout_height="75dip"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_width="180dip"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/cash_button"
         android:text="Cash in Zoo Bank"
-        android:layout_width="150dip"
         android:layout_gravity="center"
-
+        android:background="@drawable/piggy"
         android:elevation="0dp"
-        style="@android:style/Widget.Holo.Button"
-        android:layout_height="85dip"
-        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Inverse"
-        android:textSize="24sp" />
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_height="75dip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+        android:typeface="sans"
+        android:layout_width="180dip"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:layout_margin="5dp"/>
 
 </LinearLayout>
