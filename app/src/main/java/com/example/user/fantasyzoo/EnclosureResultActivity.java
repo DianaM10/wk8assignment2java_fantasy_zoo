@@ -27,13 +27,6 @@ public class EnclosureResultActivity extends AppCompatActivity{
 
         mResultText.setText(result);
 
-//        cashInBankText = (TextView)findViewById(R.id.result_text);
-//
-//        Intent intent2 = getIntent();
-//        Bundle extras2 = intent2.getExtras();
-//        Integer result2 = extras2.getInt("result2");
-//
-//        cashInBankText.setText(result2.toString());
 
     }
 
