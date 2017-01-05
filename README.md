@@ -9,3 +9,11 @@ Additionally:
 *  Animals can be sold.
 *  View the total income for the zoo.
 *  Animals can randomly go on a rampage and break out of their enclosures
+
+###Installing and Using App
+
+*  Android Studio
+
+1.  Clone repository using `git clone https://github.com/DianaM10/wk8assignment2java_fantasy_zoo`
+2.  Open in Android Studio.
+
